@@ -5,7 +5,7 @@ from PIL import Image
 import re
 
 cwd = os.getcwd()
-path = cwd + '/supplier-data/images/'
+path = 'supplier-data/images/'
 pattern = r".*\.tiff"
 
 for file in os.listdir(path):
