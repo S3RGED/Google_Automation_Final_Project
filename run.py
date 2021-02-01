@@ -25,13 +25,14 @@ def read_file(file):
     return description_dict
 
 
-def main():
+def upload():
     for file in file_list:
         p = read_file(file)
         response = requests.post("http://35.193.74.73/feedback", json=p)
         print(response.status_code)
-        
+
 
 
 if __name__ == "__main__":
-    main()
+    upload()
+    
