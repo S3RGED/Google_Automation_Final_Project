@@ -29,9 +29,9 @@ def read_file(file):
 def upload():
     for file in file_list:
         p = read_file(file)
-        response = requests.post("http://<ENTER IP>/feedback", json=p)
+        response = requests.post("http://localhost/fruits/", json=p)
         print(response.status_code)
-        
+
 
 
 
