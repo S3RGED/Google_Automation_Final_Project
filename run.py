@@ -2,6 +2,7 @@
 import os
 import requests
 import re
+import reports
 
 
 path = 'supplier-data/descriptions/'
@@ -28,11 +29,11 @@ def read_file(file):
 def upload():
     for file in file_list:
         p = read_file(file)
-        response = requests.post("http://35.193.74.73/feedback", json=p)
+        response = requests.post("http://<ENTER IP>/feedback", json=p)
         print(response.status_code)
+        
 
 
 
 if __name__ == "__main__":
     upload()
-    
